@@ -30,9 +30,9 @@ def predict_sentiment(model, vectorizer, le, text):
     return sentiment
 
 # Streamlit application
-st.title('Sentiment Analysis with SVM')
+st.title('Finance Sentiment Analysis')
 
-user_input = st.text_area('Enter a statement:', '')
+user_input = st.text_area('Enter a financial news/statement:', '')
 if st.button('Analyze Sentiment'):
     sentiment = predict_sentiment(svm_model, vectorizer, le, user_input)
     st.write('Sentiment:', sentiment)
